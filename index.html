@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Pradhananga | Web Engineer & Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#" aria-label="Home">
+                    <svg class="logo-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 3L3 10L16 17L29 10L16 3Z"/>
+                        <path d="M3 24L16 31L29 24"/>
+                        <path d="M3 17L16 24L29 17"/>
+                    </svg>
+                </a>
+                <span class="logo-text" aria-hidden="true">Shubham</span>
+            </div>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+                <svg class="theme-icon sun" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3.5"/>
+                    <path d="M12 3v2m0 14v2m7-9h2M3 12h2m13.3-6.3l-1.4 1.4M6.3 17.7l-1.4 1.4M17.7 17.7l-1.4-1.4M6.3 6.3l-1.4-1.4"/>
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24">
+                    <path d="M20.5 14.1c-1.2 1.3-2.9 2.2-4.8 2.4-3.5.3-6.5-2.4-6.5-5.9 0-2.3 1.3-4.3 3.2-5.3.8-.4 1.6-.6 2.5-.5-1.7 1.1-2.8 3-2.7 5.1.1 3.1 2.9 5.5 6.1 5.7 1.3.1 2.5-.3 3.6-1z"/>
+                </svg>
+            </button>
+        </header>
+
+        <section class="hero">
+            <div class="hero-background" aria-hidden="true">
+                <div class="airplane">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="#FF5A5F">
+                        <path d="M22 2L2 9L9 13L17 8L12 17L18 22L22 2Z"/>
+                    </svg>
+                </div>
+                <div class="cloud">☁️</div>
+                <div class="cloud">☁️</div>
+            </div>
+            
+            <div class="profile">
+                <button type="button" class="follow-button" id="follow-button">
+                    Follow <i class="fab fa-twitter"></i>
+                </button>
+                
+                <div class="profile-content">
+                    <div class="profile-image">
+                        <img src="assets/photos/profile.jpg" 
+                             alt="Shubham Pradhananga" 
+                             id="profile-img">
+                    </div>
+                    
+                    <div class="profile-info">
+                        <h1 class="profile-name">
+                            Shubham Pradhananga 
+                            <span class="verified-badge" aria-label="Verified">☑️</span>
+                        </h1>
+                        <p class="profile-tagline">Brings ideas to life with code! ✨</p>
+                        <p class="profile-bio">Exploring technology, coding, and Linux—always building, always learning.</p>
+                        
+                        <div class="profile-meta">
+                            <div class="profile-meta-item">
+                                <span>🌐</span>
+                                <span>Available</span>
+                            </div>
+                            <div class="profile-meta-item">
+                                <span>🔗</span>
+                                <a href="#" id="links-button">/links</a>
+                            </div>
+                            <div class="profile-meta-item">
+                                <span>🎂</span>
+                                <span>September 30th</span>
+                            </div>
+                            <div class="profile-meta-item">
+                                <span>📅</span>
+                                <span>Joined Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="newsletter">
+                <h3 class="newsletter-heading">Keep up to date with my latest projects!</h3>
+                <form class="newsletter-form" id="newsletter-form" novalidate>
+                    <input type="email" 
+                           class="newsletter-input" 
+                           id="newsletter-email"
+                           placeholder="Email Address" 
+                           aria-label="Email address"
+                           required>
+                    <button type="submit" class="newsletter-button">Subscribe!</button>
+                </form>
+                <p class="newsletter-disclaimer">No spam. Unsubscribe any time.</p>
+            </div>
+        </section>
+
+
+        
+        <nav class="nav">
+            <div class="nav-item active" data-tab="feed">Feed</div>
+            <div class="nav-item" data-tab="about">About</div>
+            <div class="nav-item" data-tab="content">Content</div>
+            <div class="nav-item" data-tab="guestbook">Guestbook</div>
+        </nav>
+        
+        <main>
+            <section class="feed" id="feed-section">
+                <!-- New Posts -->
+                <div class="post">
+                    <div class="post-header">
+                        <div class="post-avatar">
+                            <img src="assets/photos/profile.jpg" alt="Shubham" class="post-avatar-img">
+                        </div>
+                        <div>
+                            <div class="post-author">Shubham <span>🚀</span> <span class="post-time">• 2h ago</span></div>
+                            <div class="post-tag">🌟 Project Update</div>
+                        </div>
+                    </div>
+                    <h2 class="post-title">New Portfolio Feature: Dark Mode Analytics</h2>
+                    <div class="post-content">
+                        <p>Just implemented dark mode usage tracking! Now I can see which theme users prefer 🌗➡️🌞</p>
+                        <div class="code-snippet">
+                            <pre><code>// Theme preference tracking
+            function trackThemePreference(theme) {
+                analytics.logEvent('theme_change', {
+                    theme_mode: theme,
+                    user_agent: navigator.userAgent
+                });
+            }</code></pre>
+                        </div>
+                        <p class="post-tags">
+                            #WebAnalytics #JavaScript #UXDesign<br>
+                            🏷️ Category: Development Update<br>
+                            💡 Tip: Dark mode saves ~20% energy on OLED screens!
+                        </p>
+                    </div>
+                    <div class="post-actions">
+                        <span>❤️ 28</span>
+                        <span>💬 14</span>
+                        <span>🔁 6</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            
+                <div class="post tutorial-post">
+                    <div class="post-badge">📚 Tutorial</div>
+                    <div class="post-header">
+                        <div class="post-avatar">
+                            <img src="assets/photos/profile.jpg" alt="Shubham" class="post-avatar-img">
+                        </div>
+                        <div>
+                            <div class="post-author">Shubham <span>🧑💻</span> <span class="post-time">• 1d ago</span></div>
+                            <div class="post-tag">🐧 Linux Tip</div>
+                        </div>
+                    </div>
+                    <h2 class="post-title">Quick ZSH Customization Guide</h2>
+                    <div class="post-content">
+                        <p>Here's my current ZSH setup with powerlevel10k theme:</p>
+                        <div class="terminal-snippet">
+                            <div class="terminal-header">
+                                <span class="red-dot"></span>
+                                <span class="yellow-dot"></span>
+                                <span class="green-dot"></span>
+                            </div>
+                            <pre>➜ ~ git status
+            On branch main
+            Your branch is up to date with 'origin/main'.
+            
+            nothing to commit, working tree clean
+            ➜ <span class="cursor"></span></pre>
+                        </div>
+                        <p class="post-tags">
+                            #LinuxTips #DevOps #TerminalHacks<br>
+                            🔧 Tools: OhMyZsh + Powerlevel10k<br>
+                            ⏲️ Setup Time: 15 minutes
+                        </p>
+                    </div>
+                    <div class="post-actions">
+                        <span>❤️ 65</span>
+                        <span>💬 23</span>
+                        <span>🔁 12</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            
+                <div class="post event-post">
+                    <div class="post-header">
+                        <div class="post-avatar">
+                            <img src="assets/photos/profile.jpg" alt="Shubham" class="post-avatar-img">
+                        </div>
+                        <div>
+                            <div class="post-author">Shubham <span>🎉</span> <span class="post-time">• 3d ago</span></div>
+                            <div class="post-tag">📅 Event Alert</div>
+                        </div>
+                    </div>
+                    <h2 class="post-title">Live Coding Session This Friday!</h2>
+                    <div class="post-content">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">30</div>
+                                <div class="event-month">SEP</div>
+                            </div>
+                            <div class="event-details">
+                                <h3>Building a Markdown Editor</h3>
+                                <p>🕒 4:00 PM NPT | 📍 Zoom & YouTube Live</p>
+                                <button class="event-reminder">Set Reminder</button>
+                            </div>
+                        </div>
+                        <p class="post-tags">
+                            #LiveCoding #OpenSource #WebDev<br>
+                            🔗 Links in bio<br>
+                            🎁 Special: First 50 attendees get project files!
+                        </p>
+                    </div>
+                    <div class="post-actions">
+                        <span>❤️ 89</span>
+                        <span>💬 45</span>
+                        <span>🔁 21</span>
+                        <span>📤</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="about hidden" id="about-section">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hi, I'm Shubham Pradhananga, a tech enthusiast and developer with a strong interest in computer science and software development. I have experience working with Linux systems, primarily Arch Linux and Ubuntu, and enjoy exploring different operating systems.</p>
+                        
+                        <div class="skills-container">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-bar">
+                                <div class="skill-name">HTML/CSS</div>
+                                <div class="skill-progress" style="width: 69%">
+                                    <span>69%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-progress" style="width: 40%">
+                                    <span>40%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-name">C</div>
+                                <div class="skill-progress" style="width: 50%">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <h4>🛠️ Technical Expertise</h4>
+                                <ul>
+                                    <li>Web Development</li>
+                                    <li>C Programming</li>
+                                    <li>System Optimization</li>
+                                    <li>Version Control (Git)</li>
+                                </ul>
+                            </div>
+                            <div class="skill-card">
+                                <h4>🎓 Currently Learning</h4>
+                                <ul>
+                                    <li>Javascript</li>
+                                    <li>Node.js Backend</li>
+                                    <li>Python</li>
+                                    <li>Linux</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="/path/to/cv.pdf" class="cta-button" download>
+                            📄 Download CV
+                        </a>
+                        <button class="cta-button" onclick="window.location.href='#contact'">
+                            📬 Contact Me
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="content hidden" id="content-section">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/photos/portfolio.png" alt="Personal Portfolio">
+                        </div>
+                        <div class="project-details">
+                            <h3>Personal Portfolio Website</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <p>A responsive portfolio website showcasing my skills and projects. Features dark/light mode and responsive design.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/photos/techNews.png" alt="Task Manager">
+                        </div>
+                        <div class="project-details">
+                            <h3>Tech News Website</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+                            <p>A Tech News Website that provides tech related news from all around the world using News API.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="/api/placeholder/400/200" alt="Weather App">
+                        </div>
+                        <div class="project-details">
+                            <h3>Weather Forecast App</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+                            <p>A weather application that provides real-time forecasts using the OpenWeatherMap API. Features location detection and 5-day forecasts.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/photos/calculator.png" alt="Linux Script">
+                        </div>
+                        <div class="project-details">
+                            <h3>Calculator</h3>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JAVASCRIPT</span>
+                            </div>
+                            <p>A simple calculator made using Javascript. It can do only arthmetic operations not more than that.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="guestbook hidden" id="guestbook-section">
+                <h2>Guestbook</h2>
+                <p>Leave a message for me and other visitors! Share your thoughts, ask questions, or just say hi.</p>
+                
+                <div class="guestbook-entries" id="guestbook-entries-container">
+                    <!-- Entries will be dynamically added here -->
+                </div>
+            
+                <form id="guestbook-form">
+                    <textarea placeholder="Your message" rows="4" required></textarea>
+                    <div class="guestbook-form-footer">
+                        <input type="text" placeholder="Your name" required>
+                        <button type="submit">Sign the Guestbook</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="social-icons">
+                <a href="https://github.com/Shubham32150" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/SubhamP76679" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/shubham_pradhananga/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:shubhampradhananga@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>© 2023-2025 Shubham Pradhananga. All rights reserved.</p>
+        </footer>
+    </div>
+
+
+
+
+
+    <!-- Add this before </body> -->
+<div class="social-modal hidden" id="socialModal">
+    <div class="social-modal-content">
+        <div class="modal-header">
+            <div class="modal-header-bg"></div>
+            <div class="header-content">
+                <span class="wave-emoji">👋</span>
+                <h3>Let's Connect & Collaborate!</h3>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://github.com/Shubham32150" target="_blank" class="social-link github">
+                <div class="link-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">GitHub</span>
+                    <span class="link-handle">@Shubham32150</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link linkedin">
+                <div class="link-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">LinkedIn</span>
+                    <span class="link-handle">in/yourprofile</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+            </a>
+
+            <a href="https://x.com/SubhamP76679" target="_blank" class="social-link twitter">
+                <div class="link-icon">
+                    <i class="fab fa-x-twitter"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Twitter/X</span>
+                    <span class="link-handle">@SubhamP76679</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+            </a>
+
+            <a href="https://www.instagram.com/shubham_pradhananga/" target="_blank" class="social-link instagram">
+                <div class="link-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Instagram</span>
+                    <span class="link-handle">@shubham_pradhananga</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+            </a>
+
+            <a href="mailto:shubhampradhananga@gmail.com" class="social-link email">
+                <div class="link-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="link-content">
+                    <span class="link-title">Email</span>
+                    <span class="link-handle">shubhampradhananga@gmail.com</span>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square link-arrow"></i>
+            </a>
+        </div>
+
+        <button class="close-modal">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
